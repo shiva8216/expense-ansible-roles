@@ -1,5 +1,5 @@
 - name: Install mysql
-  hosts: frontend
+  hosts: mysql
   becom: yes
   vars:
     mysql_root_password: ExpenseApp@1
