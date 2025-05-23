@@ -1,6 +1,6 @@
 - name: Install mysql
   hosts: frontend
-  become: yes
+  becom: yes
   vars:
     mysql_root_password: ExpenseApp@1
   tasks:
