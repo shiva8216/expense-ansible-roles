@@ -1,6 +1,4 @@
 
-  vars:
-    mysql_root_password: ExpenseApp@1
 
   tasks:
   - name: Install mysql server 
