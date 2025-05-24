@@ -1,6 +1,8 @@
-- name: Install  mysql server
-  hosts: mysql
-  become: yes
+- name: Install MySQL server
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
   vars:
     mysql_root_password: ExpenseApp@1
 
