@@ -1,6 +1,6 @@
 - name: Install mysql
   hosts: sindoor
-  become:  yes
+  become: yes
   vars:
     mysql_root_password: ExpenseApp@1
 
