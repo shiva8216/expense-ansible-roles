@@ -1,10 +1,16 @@
-- name: Install mysql
+- name: Install 
   hosts: mysql
   become: yes
   vars:
     mysql_root_password: ExpenseApp@1
 
   tasks:
+
+  - name: Install mysql server 
+    ansible.builtin.package:
+       name: mysql-server
+       state: installed
+
   - name: install Mysql Libraries
     ansible.builtin.pip:
       name: "{{ item }}"
@@ -12,11 +18,7 @@
     - cryptography
     - PyMySQL
       
-
-  - name: Install mysql server 
-    ansible.builtin.package:
-       name: mysql-server
-       state: installed
+  
 
   - name: start and enable mysql server
     ansible.builtin.service:
